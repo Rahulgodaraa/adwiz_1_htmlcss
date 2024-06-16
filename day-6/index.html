@@ -1,0 +1,112 @@
+ <!DOCTYPE html>
+
+ <html>
+    <head>
+        <title>Resume_form_ass</title>
+    </head>
+
+    <style>
+        *{
+            margin: 15px;
+        }
+        #img{
+            border-radius: 50%;
+        }
+        table , th  , td{
+            
+            padding: 10px;
+           text-align: center;
+           border: 2px solid black;
+           border-collapse: collapse;
+        }
+        
+        #Gender{
+            margin: 20px 10px; 
+        }
+        #submit{
+            margin: 20px 20px;
+            padding: 10px 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: green;
+            color: white;
+        }
+
+    </style>
+    <body>
+        <img id="img" src="./../20IT1062.jpg" width="100px" height="100px" alt="">
+          <section class="info">
+                <p>Name: Rahul</p>
+                <p>Phone: 9222005261</p>
+                <p>address: Dombivali</p>
+                <hr>
+
+                <div class="edu">
+                    <h1>
+                        Education
+    
+                    </h1>
+    
+                    <table>
+                        <th>Institute</th>
+                        <th>Year of Passout</th>
+                        <th>Grade</th>
+                        <th>Education</th>
+                        <tr>
+                            <td>RAIT</td>
+                            <td>2024</td>
+                            <td>8.5</td>
+                            <td>B.tech</td>
+                        </tr>
+                        <tr>
+                            <td>Tilak-Nagar</td>
+                            <td>2020</td>
+                            <td>65</td>
+                            <td>HSC</td>
+                        </tr><tr>
+                            <td>Modern School</td>
+                            <td>2018</td>
+                            <td>85</td>
+                            <td>SSC</td>
+                        </tr>
+                    </table>
+                </div>
+                <hr>
+                </div>
+          </section>
+
+
+          <section class="form">
+            <form action="">
+                <fieldset>
+                    <legend >Contact me:</legend>
+                    <label for="top"> Topic: <br>
+                        <textarea name="top" id="top" rows="1"></textarea><br>
+                    <label for="msg">  Message: <br>
+                        <textarea name="msg" id="msg" rows="5" ></textarea>
+                    </label><br>
+              
+                    </label><label for="Number"> Phone Number: <br>
+                        <input type="Phone" id="NUmber"  name="Number">
+                    </label><br>
+                    <label id="Gender" for="Gender"> Gender:
+                       <select name="Gender" id="Gender"> 
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                        <option value="Custom">Custom</option>
+                       </select>
+                    </label><br>
+
+                    <input onclick="alert('Form Recived, will Contact You shortly ')" id="submit" type="submit">
+                </fieldset>
+            </form>
+          </section>
+          <br>
+          <hr>
+
+          <section class="map">
+            
+            <iframe width="20%" height="400px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7004.837957650777!2d77.10116294999999!3d28.617202399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04aa6a70fff1%3A0xcd842b88417969c4!2sTihar%20Prison%20Complex%2C%20Tihar%20Central%20Jail%2C%20Tihar%20Jail%2C%20Delhi%2C%20110058!5e0!3m2!1sen!2sin!4v1718514930187!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </section>
+    </body>
+ </html>
