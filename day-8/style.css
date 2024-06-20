@@ -1,0 +1,37 @@
+ 
+
+.container{
+
+    border: 2px solid red;
+    padding: 10px;
+
+}
+
+.box1{
+    border: 2px solid red;
+    padding: 100px; 
+    margin: 10px;
+}
+
+.box2{
+    border: 2px solid red;
+    padding: 100px; 
+    margin: 100px 10px;
+
+}.box3{
+    border: 2px solid red;
+    padding: 100px; 
+    margin: 100px 10px;
+
+}.box4{
+    border: 2px solid red;
+    padding: 100px; 
+    margin: 100px 10px;
+
+}
+.box5{
+    border: 2px solid red;
+    padding: 100px; 
+    margin: 100px 10px;
+
+}
