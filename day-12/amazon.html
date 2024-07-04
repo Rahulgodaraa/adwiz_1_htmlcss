@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .borderclass:hover {
+        border: 2px solid white;
+        border-radius: 5px;
+      }
+
+      #navbar {
+        color: white;
+        height: 60px;
+        background-color: #252f25;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        /* flex-direction: row-reverse;
+        flex-direction: column;
+        flex-direction: column-reverse; */
+        /* justify-content: space-between; */
+        /* justify-content: space-evenly; */
+        /* justify-content: space-around; */
+      }
+      #leftDiv {
+        display: flex;
+        /* border: 1px solid white; */
+        width: 22%;
+        height: 80%;
+        justify-content: space-between;
+        /* border: 1px solid blue; */
+      }
+      #logoDiv {
+        width: 44%;
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #logoDiv:hover {
+        border: 1px solid white;
+        border-radius: 2px;
+      }
+      #addressDiv {
+        width: 54%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid red; */
+      }
+      #addressDiv:hover {
+        border: 1px solid white;
+        border-radius: 2px;
+      }
+
+      #addressP {
+        color: rgb(205, 204, 204);
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      #addressh5 {
+        font-size: 18px;
+        letter-spacing: 6px;
+      }
+
+      #centerDiv {
+        width: 50%;
+        /* border: 4px solid red; */
+        display: flex;
+        height: 66%;
+        align-items: center;
+        border-radius: 8px;
+      }
+
+      #centerDiv:focus-within {
+        border: 3px solid #faaa42;
+      }
+
+      /* input[type="text"]:focus {
+        border: 2px solid #faaa42;
+      } */
+
+      #centerSection {
+        height: 100%;
+        width: 8%;
+        /* border: 1px solid red; */
+        border-radius: 6px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        background-color: #e6e6e6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid rgb(190, 190, 190);
+      }
+      #centerSection:hover {
+        background-color: #d5d5d5;
+      }
+
+      #centerSection p,
+      span {
+        font-size: 12px;
+        color: rgb(96, 96, 96);
+      }
+      #centerSearch {
+        height: 100%;
+        width: 84%;
+        /* border: 1px solid white; */
+        background-color: white;
+        color: black;
+        display: flex;
+        align-items: center;
+      }
+      #centerSearch input {
+        height: 24px;
+        width: 96%;
+        margin: auto;
+        font-size: 16px;
+        border: none;
+        outline: none;
+      }
+
+      #centerIcon {
+        height: 100%;
+        width: 8%;
+        /* border: 1px solid white; */
+        background-color: #febd69;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      #centerIcon:hover {
+        background-color: #faaa42;
+      }
+      #centerIcon span {
+        font-size: 30px;
+        color: black;
+      }
+
+      #rightDiv {
+        width: 26%;
+        height: 100%;
+        /* border: 1px solid white; */
+        display: flex;
+        justify-content: space-around;
+      }
+      #rightLang {
+        width: 18%;
+        /* border: 1px solid white; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #rightLang > p {
+        margin-left: 6px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      #rightLang > span {
+        color: rgb(206, 206, 206);
+      }
+
+      #rightAccount {
+        width: 30%;
+        /* border: 1px solid white; */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: left;
+      }
+      #rightAccount p {
+        font-size: 12px;
+        font-weight: 500;
+      }
+      #rightAccount span {
+        margin-top: -6px;
+      }
+      #rightOrders {
+        width: 16%;
+        /* border: 1px solid white; */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+      #rightOrders p {
+        font-size: 12px;
+      }
+      #rightCart {
+        width: 22%;
+        /* border: 1px solid white; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #rightCart span {
+        color: white;
+      }
+
+      #rightCart span:nth-child(1) {
+        font-size: 36px;
+      }
+      #rightCart span:last-child {
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 16px;
+      }
+
+      #navbar-2 {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #232f3e;
+        color: white;
+      }
+
+      #navbar-2 .left-nav {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        width: 70%;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      li {
+        padding: 11px 5px;
+      }
+
+      li:nth-child(6) {
+        display: flex;
+        align-items: center;
+      }
+
+      li:nth-child(1) {
+        display: flex;
+        align-items: center;
+      }
+
+      .menu {
+        color: white;
+        padding: 2px;
+      }
+
+      #body {
+        display: flex;
+        border: 2px solid black;
+        width: 100%;
+        justify-content: space-around;
+      }
+
+      #filters {
+        width: 16%;
+        height: 1000px;
+        padding: 15px 15px;
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+
+      }
+
+      #filters .delivery{
+        margin-bottom: 25px;
+      }
+
+      #filters .category{
+        margin-bottom: 25px;
+      }
+
+      #filters .customer{
+        margin-bottom: 25px;
+        
+      }
+
+      #filters .brands{
+        margin-bottom: 25px;
+        
+      }
+
+       
+      #filters .deals{
+        margin-top: 25px;
+        
+      }
+
+      #filters .item-condition {
+        margin-top: 25px;
+
+      }
+
+      #filters .star {
+        margin-top: 25px;
+
+      }
+
+
+      #products {
+        width: 82%;
+        <!-- border: 2px solid black; -->
+      }
+
+      #productparent {
+         
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .productcard {
+        border: 2px solid rgb(253, 248, 248);
+        width: 19%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0 12px;
+        margin: 12px 12px; 
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+      }
+
+        .po-img{
+          border-radius: 5px;
+          background-color: #f7f7f7;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: 50px ;
+
+      }
+
+      .rate {
+        font-size: 20px;
+      }
+
+      .ruppe{
+        font-size: 10px;
+      }
+      .mrp{
+        font-size: 14px;
+        text-decoration:line-through;
+      }
+      .nums{
+        color: #47768d;
+        font-size: 18px;
+      }
+
+      p{
+        font-size: 14px;
+       }
+
+
+       button{
+        display: flex;
+         margin-left: 50px;
+        width: 35%;
+        background-color: #ffd814;
+        border-radius: 25px;
+        border: none;
+        padding: 5px;
+       }
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <div id="leftDiv">
+        <div id="logoDiv">
+          <img
+            style="height: 78%; width: 84%"
+            src="https://zeevector.com/wp-content/uploads/LOGO/Amazon-India-Logo-PNG-White.png"
+            alt="Amazon"
+          />
+        </div>
+        <div id="addressDiv">
+          <span class="material-symbols-outlined"> location_on </span>
+          <div>
+            <p id="addressP">Delivering to Mumbai 400070</p>
+            <h5>Update Location</h5>
+          </div>
+        </div>
+      </div>
+      <div id="centerDiv">
+        <div id="centerSection">
+          <p>All</p>
+          <span class="material-symbols-outlined"> arrow_drop_down </span>
+        </div>
+        <div id="centerSearch">
+          <input type="text" placeholder="Search Amazon.in" />
+        </div>
+        <div id="centerIcon">
+          <span class="material-symbols-outlined"> search </span>
+        </div>
+      </div>
+      <div id="rightDiv">
+        <div id="rightLang" class="borderclass">
+          <img
+            style="height: 14px; width: 20px"
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png"
+            alt="flag"
+          />
+          <p>EN</p>
+          <span class="material-symbols-outlined"> arrow_drop_down </span>
+        </div>
+        <div id="rightAccount" class="borderclass">
+          <p>Hello, sign in</p>
+          <div style="display: flex">
+            <h5>Account & List</h5>
+            <span class="material-symbols-outlined"> arrow_drop_down </span>
+          </div>
+        </div>
+        <div id="rightOrders" class="borderclass">
+          <p>Returns</p>
+          <h5>& Orders</h5>
+        </div>
+        <div id="rightCart" class="borderclass">
+          <span class="material-symbols-outlined"> shopping_cart </span>
+          <span>Cart</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="navbar-2">
+      <ul class="left-nav">
+        <li class="borderclass">
+          <span class="material-symbols-outlined menu"> menu </span> All
+        </li>
+        <li class="borderclass">Fresh Meat</li>
+        <li class="borderclass">Amazon miniTV</li>
+        <li class="borderclass">Sell</li>
+        <li class="borderclass">Gift Cards</li>
+        <li class="borderclass">
+          Browsing Histroy
+          <span class="material-symbols-outlined"> arrow_drop_down </span>
+        </li>
+        <li class="borderclass">Buy Again</li>
+        <li class="borderclass">AmazonBasics</li>
+        <li class="borderclass">Amazon Pay</li>
+        <li class="borderclass">Acount Amazon.in</li>
+      </ul>
+      <div class="right-nav">
+        <img
+          class="borderclass"
+          src="https://m.media-amazon.com/images/G/31/Events/img24/PD24/GW/PD24_SWM_Dates_V2._CB569503763_.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div id="body">
+      <div id="filters">
+<div class="delivery">
+  <strong>Delivery</strong>
+<form action="">
+  <input type="checkbox"> All Prime
+</form> 
+
+</div>
+<div class="category">
+<strong>Category</strong>
+<p>Any Department</p>
+<p>Home & Kitchen</p>
+<p>Large Appliances</p>
+<p> <Strong>Refrigerator</Strong></p>
+
+</div>
+
+<div class="customer">
+<strong>Customer Reviewa</strong>
+<div>
+  <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+  <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+  <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+  <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+& Up
+
+</div>
+</div>
+
+<div class="brands">
+
+<strong>Brands</strong>
+<form id="brand" action="">
+ <p> <input type="checkbox"> Samsung</p>
+  <p><input type="checkbox"> Apple</p>
+  <p><input type="checkbox"> Orange</p>
+  <p><input type="checkbox"> Grapes</p>
+  <p><input type="checkbox"> Samsung</p>
+  <p><input type="checkbox"> Voltas</p>
+
+   
+</form> 
+
+</div>
+
+<strong>Large Appliancees Price</strong>
+<strong>230 - 155,600+</strong>
+
+
+<div class="deals">
+<strong>Deals & Discounts</strong>
+<p>All Discounts</p>
+<p>Todays's Deals</p>
+</div>
+
+<div class="item-condition">
+  <Strong>Item Condition</Strong>
+  <p>New</p>
+</div>
+
+<div class="star">
+
+  <strong>Energy Star</strong>
+  <form id="brand" action="">
+   <p> <input type="checkbox"> 1 Star</p>
+    <p><input type="checkbox"> 2 Star</p>
+    <p><input type="checkbox"> 3 Star</p>
+    <p><input type="checkbox"> 4 Star</p>
+    <p><input type="checkbox"> 5 Star</p>
+     
+  </form> 
+  
+  </div>
+
+      </div>
+      <div id="products">
+        <h3>Result</h3>
+        <div id="productparent">
+          <div class="productcard">
+            <div class="po-img">
+              <img src="https://m.media-amazon.com/images/I/61wzZzm2PEL._AC_UY218_.jpg" alt="" />
+            </div>
+            <p>
+              Samsung 236 L, 3 Star, Digital Inverter, Frost Free Double Door
+              Refrigerator (RT28C3053S8/HL, Silver, Elegant Inox, 2024 Model)
+            </p>
+            <div>
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+          <span class="material-symbols-outlined"> arrow_drop_down </span>
+                <span class="nums">6,789</span> 
+            </div>
+            <div>
+              <span  class="material-symbols-outlined ruppe">
+                currency_rupee
+                </span>
+                <span class="rate">25,990</span>
+                <span class="mrp">M.R.P:
+                  <span  class="material-symbols-outlined ruppe">
+                    currency_rupee
+                    </span> 37,990  
+                </span>
+            </div>
+            <p>(32% off)</p>
+            <span>Save  <span  class="material-symbols-outlined ruppe">
+              currency_rupee
+              </span></span><p>750</p>
+            <p>with coupon</p>
+             <img width="30%" src="https://m.media-amazon.com/images/G/31/perc/prime-logo.svg" alt="">
+             <p>FREE delivery<strong> Tomorrow 7 am - 9 pm </strong></p>
+             <p>Service: Installation</p>
+             <button>Add to cart</button>
+          </div>
+          <div class="productcard">
+            <div class="po-img">
+              <img src="https://m.media-amazon.com/images/I/61wzZzm2PEL._AC_UY218_.jpg" alt="" />
+            </div>
+            <p>
+              Samsung 236 L, 3 Star, Digital Inverter, Frost Free Double Door
+              Refrigerator (RT28C3053S8/HL, Silver, Elegant Inox, 2024 Model)
+            </p>
+            <div>
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+          <span class="material-symbols-outlined"> arrow_drop_down </span>
+                <span class="nums">6,789</span> 
+            </div>
+            <div>
+              <span  class="material-symbols-outlined ruppe">
+                currency_rupee
+                </span>
+                <span class="rate">25,990</span>
+                <span class="mrp">M.R.P:
+                  <span  class="material-symbols-outlined ruppe">
+                    currency_rupee
+                    </span> 37,990  
+                </span>
+            </div>
+            <p>(32% off)</p>
+            <span>Save  <span  class="material-symbols-outlined ruppe">
+              currency_rupee
+              </span></span><p>750</p>
+            <p>with coupon</p>
+             <img width="30%" src="https://m.media-amazon.com/images/G/31/perc/prime-logo.svg" alt="">
+             <p>FREE delivery<strong> Tomorrow 7 am - 9 pm </strong></p>
+             <p>Service: Installation</p>
+             <button>Add to cart</button>
+          </div><div class="productcard">
+            <div class="po-img">
+              <img src="https://m.media-amazon.com/images/I/61wzZzm2PEL._AC_UY218_.jpg" alt="" />
+            </div>
+            <p>
+              Samsung 236 L, 3 Star, Digital Inverter, Frost Free Double Door
+              Refrigerator (RT28C3053S8/HL, Silver, Elegant Inox, 2024 Model)
+            </p>
+            <div>
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+          <span class="material-symbols-outlined"> arrow_drop_down </span>
+                <span class="nums">6,789</span> 
+            </div>
+            <div>
+              <span  class="material-symbols-outlined ruppe">
+                currency_rupee
+                </span>
+                <span class="rate">25,990</span>
+                <span class="mrp">M.R.P:
+                  <span  class="material-symbols-outlined ruppe">
+                    currency_rupee
+                    </span> 37,990  
+                </span>
+            </div>
+            <p>(32% off)</p>
+            <span>Save  <span  class="material-symbols-outlined ruppe">
+              currency_rupee
+              </span></span><p>750</p>
+            <p>with coupon</p>
+             <img width="30%" src="https://m.media-amazon.com/images/G/31/perc/prime-logo.svg" alt="">
+             <p>FREE delivery<strong> Tomorrow 7 am - 9 pm </strong></p>
+             <p>Service: Installation</p>
+             <button>Add to cart</button>
+          </div><div class="productcard">
+            <div class="po-img">
+              <img src="https://m.media-amazon.com/images/I/61wzZzm2PEL._AC_UY218_.jpg" alt="" />
+            </div>
+            <p>
+              Samsung 236 L, 3 Star, Digital Inverter, Frost Free Double Door
+              Refrigerator (RT28C3053S8/HL, Silver, Elegant Inox, 2024 Model)
+            </p>
+            <div>
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+          <span class="material-symbols-outlined"> arrow_drop_down </span>
+                <span class="nums">6,789</span> 
+            </div>
+            <div>
+              <span  class="material-symbols-outlined ruppe">
+                currency_rupee
+                </span>
+                <span class="rate">25,990</span>
+                <span class="mrp">M.R.P:
+                  <span  class="material-symbols-outlined ruppe">
+                    currency_rupee
+                    </span> 37,990  
+                </span>
+            </div>
+            <p>(32% off)</p>
+            <span>Save  <span  class="material-symbols-outlined ruppe">
+              currency_rupee
+              </span></span><p>750</p>
+            <p>with coupon</p>
+             <img width="30%" src="https://m.media-amazon.com/images/G/31/perc/prime-logo.svg" alt="">
+             <p>FREE delivery<strong> Tomorrow 7 am - 9 pm </strong></p>
+             <p>Service: Installation</p>
+             <button>Add to cart</button>
+          </div><div class="productcard">
+            <div class="po-img">
+              <img src="https://m.media-amazon.com/images/I/61wzZzm2PEL._AC_UY218_.jpg" alt="" />
+            </div>
+            <p>
+              Samsung 236 L, 3 Star, Digital Inverter, Frost Free Double Door
+              Refrigerator (RT28C3053S8/HL, Silver, Elegant Inox, 2024 Model)
+            </p>
+            <div>
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+          <span class="material-symbols-outlined"> arrow_drop_down </span>
+                <span class="nums">6,789</span> 
+            </div>
+            <div>
+              <span  class="material-symbols-outlined ruppe">
+                currency_rupee
+                </span>
+                <span class="rate">25,990</span>
+                <span class="mrp">M.R.P:
+                  <span  class="material-symbols-outlined ruppe">
+                    currency_rupee
+                    </span> 37,990  
+                </span>
+            </div>
+            <p>(32% off)</p>
+            <span>Save  <span  class="material-symbols-outlined ruppe">
+              currency_rupee
+              </span></span><p>750</p>
+            <p>with coupon</p>
+             <img width="30%" src="https://m.media-amazon.com/images/G/31/perc/prime-logo.svg" alt="">
+             <p>FREE delivery<strong> Tomorrow 7 am - 9 pm </strong></p>
+             <p>Service: Installation</p>
+             <button>Add to cart</button>
+          </div><div class="productcard">
+            <div class="po-img">
+              <img src="https://m.media-amazon.com/images/I/61wzZzm2PEL._AC_UY218_.jpg" alt="" />
+            </div>
+            <p>
+              Samsung 236 L, 3 Star, Digital Inverter, Frost Free Double Door
+              Refrigerator (RT28C3053S8/HL, Silver, Elegant Inox, 2024 Model)
+            </p>
+            <div>
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+          <span class="material-symbols-outlined"> arrow_drop_down </span>
+                <span class="nums">6,789</span> 
+            </div>
+            <div>
+              <span  class="material-symbols-outlined ruppe">
+                currency_rupee
+                </span>
+                <span class="rate">25,990</span>
+                <span class="mrp">M.R.P:
+                  <span  class="material-symbols-outlined ruppe">
+                    currency_rupee
+                    </span> 37,990  
+                </span>
+            </div>
+            <p>(32% off)</p>
+            <span>Save  <span  class="material-symbols-outlined ruppe">
+              currency_rupee
+              </span></span><p>750</p>
+            <p>with coupon</p>
+             <img width="30%" src="https://m.media-amazon.com/images/G/31/perc/prime-logo.svg" alt="">
+             <p>FREE delivery<strong> Tomorrow 7 am - 9 pm </strong></p>
+             <p>Service: Installation</p>
+             <button>Add to cart</button>
+          </div><div class="productcard">
+            <div class="po-img">
+              <img src="https://m.media-amazon.com/images/I/61wzZzm2PEL._AC_UY218_.jpg" alt="" />
+            </div>
+            <p>
+              Samsung 236 L, 3 Star, Digital Inverter, Frost Free Double Door
+              Refrigerator (RT28C3053S8/HL, Silver, Elegant Inox, 2024 Model)
+            </p>
+            <div>
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+               <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+          <span class="material-symbols-outlined"> arrow_drop_down </span>
+                <span class="nums">6,789</span> 
+            </div>
+            <div>
+              <span  class="material-symbols-outlined ruppe">
+                currency_rupee
+                </span>
+                <span class="rate">25,990</span>
+                <span class="mrp">M.R.P:
+                  <span  class="material-symbols-outlined ruppe">
+                    currency_rupee
+                    </span> 37,990  
+                </span>
+            </div>
+            <p>(32% off)</p>
+            <span>Save  <span  class="material-symbols-outlined ruppe">
+              currency_rupee
+              </span></span><p>750</p>
+            <p>with coupon</p>
+             <img width="30%" src="https://m.media-amazon.com/images/G/31/perc/prime-logo.svg" alt="">
+             <p>FREE delivery<strong> Tomorrow 7 am - 9 pm </strong></p>
+             <p>Service: Installation</p>
+             <button>Add to cart</button>
+          </div><div class="productcard">
+            <div class="po-img">
+              <img src="https://m.media-amazon.com/images/I/61wzZzm2PEL._AC_UY218_.jpg" alt="" />
+            </div>
+            <div class="po-description">
+              <p>
+                Samsung 236 L, 3 Star, Digital Inverter, Frost Free Double Door
+                Refrigerator (RT28C3053S8/HL, Silver, Elegant Inox, 2024 Model)
+              </p>
+              <div>
+                 <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+                 <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+                 <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+                 <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+                 <img src="https://m.media-amazon.com/images/G/31/perc/star-fullfill.svg" width="9%" alt="">
+            <span class="material-symbols-outlined"> arrow_drop_down </span>
+                  <span class="nums">6,789</span> 
+              </div>
+              <div>
+                <span  class="material-symbols-outlined " id="ruppe">
+                  currency_rupee
+                  </span>
+                  <span class="rate">25,990</span>
+                  <span class="mrp">M.R.P:
+                    <span class="material-symbols-outlined">
+                      currency_rupee
+                      </span> 37,990  
+                  </span>
+              </div>
+              <p>(32% off)</p>
+              <span>Save  <span  class="material-symbols-outlined ruppe">
+                currency_rupee
+                </span></span><p>750</p>
+              <p>with coupon</p>
+               <img width="30%" src="https://m.media-amazon.com/images/G/31/perc/prime-logo.svg" alt="">
+               <p>FREE delivery<strong> Tomorrow 7 am - 9 pm </strong></p>
+               <p>Service: Installation</p>
+               <button>Add to cart</button>
+            </div>
+
+
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
